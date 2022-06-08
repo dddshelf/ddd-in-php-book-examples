@@ -1,0 +1,28 @@
+{# snippet twig-template #}
+{% extends "base.html.twig" %}
+
+{% block content %}
+    {% if error is defined %}
+        <div class="alert error">{{ error }} </div>
+    {% else %}
+        <div class="alert success">Post was created successfully!</div>
+    {% endif %}
+    <table>
+        <thead><tr><th>ID</th><th>TITLE</th><th>ACTIONS</th></tr></thead>
+        <tbody>
+        {% for post in posts %}
+            <tr>
+                <td>{{ post.id }}</td>
+                <td>{{ post.title }}</td>
+                <td><a href="{{ edit_post_url(post.id) }}">Edit</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <form action="/" method="POST">
+        <input type="text" name="post[title]"/>
+        <textarea name="post[content]"></textarea>
+        <button type="submit">Create post</button>
+    </form>
+{% endblock %}
+{# end-snippet #}
