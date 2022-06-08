@@ -1,0 +1,55 @@
+{
+    "name": "buenosvinos/ddd-in-php",
+    "require": {
+        "php": ">=7.4.0",
+        "ext-pdo_mysql": "*",
+        "ext-pcntl": "*",
+        "ext-posix": "*",
+        "doctrine/orm": "^2.6.2",
+        "videlalvaro/php-amqplib": "2.4.0",
+        "carlosbuenosvinos/ddd": "dev-master",
+        "jms/serializer": "^1.1",
+        "twig/twig": "^2.4",
+        "keyvanakbary/mimic": "^1.0",
+        "ramsey/uuid": "^3.7",
+        "elasticsearch/elasticsearch": "^6.0",
+        "bunny/bunny": "^0.2",
+        "zumba/json-serializer": "^2.1",
+        "spatie/async": "^1.1",
+        "predis/predis": "^1.1"
+    },
+    "minimum-stability": "dev",
+    "require-dev": {
+        "phpunit/phpunit": "~8.0",
+        "mockery/mockery": "^1.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carlos Buenosvinos",
+            "email": "carlos.buenosvinos@gmail.com"
+        },
+        {
+            "name": "Christian Soronellas",
+            "email": "theunic@gmail.com"
+        },
+        {
+            "name": "Keyvan Akbary",
+            "email": "me@keyvanakbary.com"
+        }
+    ],
+    "config": {
+        "bin-dir": "bin/",
+        "preferred-install": "dist"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "": "tests/"
+        }
+    }
+}
